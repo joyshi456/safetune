@@ -6,7 +6,6 @@ from huggingface_hub import InferenceClient
 class TestHuggingFaceEndpoint(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.client = InferenceClient(model=ENDPOINT_URL, token=HF_TOKEN)
 
     def test_basic_generation(self):
         prompt = "The capital of France is"

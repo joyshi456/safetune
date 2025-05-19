@@ -5,7 +5,6 @@ from huggingface_hub import InferenceClient
 
 # ------------------ 1. Setup Client ------------------
 
-client = InferenceClient(model=BASELINE_URL, token=HF_TOKEN)
 
 # ------------------ 2. File Paths ------------------
 DATA_DIR = Path("data")
