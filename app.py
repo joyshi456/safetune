@@ -20,9 +20,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Replace these directly or load from .env
-BASELINE_URL = os.getenv("BASELINE_URL")
-SAFE_URL     = os.getenv("SAFE_URL")
-HF_TOKEN     = os.getenv("HF_TOKEN")
+BASELINE_URL = st.secrets.get("BASELINE_URL") or os.getenv("BASELINE_URL")
+SAFE_URL     = st.secrets.get("SAFE_URL") or os.getenv("SAFE_URL")
+HF_TOKEN     = st.secrets.get("HF_TOKEN") or os.getenv("HF_TOKEN")
 
 client_base = InferenceClient(model=BASELINE_URL, token=HF_TOKEN)
 client_safe = InferenceClient(model=SAFE_URL, token=HF_TOKEN) if SAFE_URL else None
