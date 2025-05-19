@@ -4,8 +4,7 @@ from pathlib import Path
 from huggingface_hub import InferenceClient
 
 # ------------------ 1. Setup Client ------------------
-BASELINE_URL = "https://krfgyxarenn42e99.us-east-1.aws.endpoints.huggingface.cloud"
-HF_TOKEN = "REMOVED"
+
 client = InferenceClient(model=BASELINE_URL, token=HF_TOKEN)
 
 # ------------------ 2. File Paths ------------------

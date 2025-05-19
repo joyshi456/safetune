@@ -2,8 +2,6 @@ import unittest
 from huggingface_hub import InferenceClient
 
 # Actual working values
-ENDPOINT_URL = "https://nqzacfgglgyfxrwn.us-east-1.aws.endpoints.huggingface.cloud"
-HF_TOKEN = "REMOVED"
 
 class TestHuggingFaceEndpoint(unittest.TestCase):
     @classmethod
